@@ -1,0 +1,193 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Stargazing at Night</title>
+<style>
+	@font-face {
+		font-family: raleway;
+		src: url('Raleway.ttf') format('truetype');
+	}
+	@font-face {
+		font-family: tourner;
+		src: url("Tourner.ttf") format('truetype');
+	} @font-face {
+		font-family: bebasneue;
+		src: url("bebasneue.ttf") format('truetype');
+	} 
+	
+	@keyframes launchRocket { 0% {
+		opacity: 0;
+    	transform: translateY(100vh);
+  	} 10% {
+    	opacity: 1;
+ 	 } 100% {
+    	opacity: 0;
+    	transform: translateY(-150vh);
+  	}
+} #rocket {
+	position: fixed;
+	bottom: -250px;
+	left: 14px;
+	width: 70px;
+	animation: launchRocket 8s 	ease-in-out 0.5s forwards;
+	z-index: 999;
+	background: none;
+	border: none;
+	outline: none;
+	mix-blend-mode: hard-light;
+	opacity: 1;
+	image-rendering: auto;filter: brightness(1) contrast(1);
+	
+	} @keyframes twinkleFast {
+		0% { opacity: 0.2; }
+		50% { opacity: 1; }
+		100% { opacity: 0.2; }
+	} @keyframes twinkleSlow {
+  0% { opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { opacity: 0.2; }
+	}#star {
+	position: absolute;
+	top: 160px;
+	right: 80px;
+	width: 60px;
+	animation: twinkleFast 2.5s ease-in-out infinite;
+	z-index: 998;
+	mix-blend-mode: hard-light;
+	pointer-events: none;
+} #bigstar {
+	position: absolute;
+	top: 145px;
+	right: 115px;
+	mix-blend-mode: hard-light;
+	width: 120px;
+	animation: twinkleSlow 4s ease-in-out infinite;
+	z-index: 997;
+	pointer-events: none;
+} * {
+		margin: 0; 
+		padding: 0;
+	} body {
+		background: whitesmoke;
+	} #page {
+		width: 928px;
+		height: 1228px;
+		background-image: 
+		linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6)),
+		url("image1.jpg");
+		background-size: cover;
+		background-position: center;
+		box-shadow: 2px 3px 6px darkgray;
+		margin: 0 auto;
+} h1 {
+	 	font: 43pt/1.4em tourner;
+        text-align: center;
+	  	color: white;
+		padding-top: 50px;
+	    display: block;
+		text-shadow: 1px 1px 15px blue;
+		margin-bottom: px;
+		margin-top: 25px;
+		text-: url("image3.jpg")
+  } h2 {
+     	font: 14pt/1.4em raleway;
+        text-align: center;
+	  	color: white;
+	    display: block;
+	  	margin-top: 13px;
+    } p {
+		font: 14pt/1.4em raleway;
+		width: 768px;
+		margin-right: auto;
+		margin: 25px auto;
+		color: white;
+		text-shadow: 1px 1px 20px black;
+
+	} p1 {
+		font: 35pt/1.4em bebasneue;
+		width: 200px;
+		padding-bottom: 30px;
+		color: white;
+		text-shadow: 1px 1px 10px dodgerblue;
+		
+	} p3 { 
+		font: 24pt/1.4em tourner;
+		color: white;
+		text-align: center;
+		display: block;
+		text-shadow: 1px 1px 10px dodgerblue;
+	} img {
+		width: 490px;
+		float: left;
+		margin-right: 25px;
+		display: block;
+		box-shadow: 2px 3px 80px midnightblue; 
+	} .neptune-right {
+  		width: 500px;           
+  		overflow: hidden;
+  		float: right;
+  		margin-right: 80px;
+		margin-left: 25px;
+  		margin-bottom: 25px;
+  		box-shadow: 2px 3px 80px midnightblue;
+	} .neptune-right img {
+ 		 width: 100%;
+  		height: 100%;
+  		object-fit: cover;
+  		object-position: center;
+  		display: block;
+	}
+
+
+</style>
+</head>
+
+<body>
+<div id="page">
+	
+	<img id="star" src="star.png" alt="Twinkling Star">
+	<img id="bigstar" src="star.png" alt="Netherlands Star">
+	
+<h1>The Distant Blue Giant</h1>
+<h2>A Mysterious World of Ice, Wind, and Wonder</h2>
+<p>&nbsp;</p>
+<p> 
+  <p1>Neptune</p1> <img src="neptune.jpg"/>
+  <p1>&nbsp;</p1>
+<br>
+<strong>Rediscover Wonder:</strong> Neptune, the farthest planet from the Sun, is a swirling sphere of deep blue mystery. Its icy winds and distant orbit remind us how vast the outer solar system truly is.
+</p>
+
+<p>
+<strong>Unplug and Unwind:</strong> No noise, no distractions—just the quiet majesty of a planet 2.8 billion miles away.
+</p>
+<div class="neptune-right">
+  <img src="neptune2.jpg" alt="Neptune">
+</div>
+
+<p>
+<strong>Learn and Explore:</strong> From its supersonic storms to its moon Triton’s retrograde orbit, Neptune offers endless opportunities for discovery and awe. It’s a gateway to planetary science and cosmic curiosity.
+</p>
+<div style="width: 820px; margin: 20px auto;">
+  <p style="font-family: bebasneue; font-size: 23.7pt; line-height: 1.5em; color: white; text-shadow: 1px 1px 15px navy; margin: 2px; padding-left: 25px; text-shadow: 1px 1px 20px dodgerblue;">
+    <span style="float: left; font-size: 36pt; line-height: 0.8em; padding-right: 10px; color: dodgerblue; font-family: tourner;">“</span>
+    Somewhere, something incredible is waiting to be known.
+    <br>
+    <span style="font-size: 13pt; font-family: raleway; display: block; margin-top: 15px; text-align: right;">— Carl Sagan</span>
+  </p>
+</div>
+
+
+</div>
+	
+<img id="rocket" src="rocket.png" alt="Rocket Launching">
+	
+</body>
+
+</html>
+
+
+
+
+
