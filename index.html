@@ -1,77 +1,35 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Stargazing at Night</title>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
 <style>
+    * {margin: 0; padding: 0;}
 	@font-face {
-		font-family: raleway;
-		src: url('Raleway.ttf') format('truetype');
-	}
-	@font-face {
-		font-family: tourner;
-		src: url("Tourner.ttf") format('truetype');
+		font-family: Raleway;
+		src: url('Raleway.ttf');
 	} @font-face {
-		font-family: bebasneue;
-		src: url("bebasneue.ttf") format('truetype');
-	} 
-	
-	@keyframes launchRocket { 0% {
-		opacity: 0;
-    	transform: translateY(100vh);
-  	} 10% {
-    	opacity: 1;
- 	 } 100% {
-    	opacity: 0;
-    	transform: translateY(-150vh);
-  	}
-} img[src*="rocket.png"] {
-  background: transparent;
-  border: none;
-  padding: 0;
-} #rocket {
-	position: fixed;
-	bottom: -250px;
-	left: 14px;
-	width: 70px;
-	animation: launchRocket 8s 	ease-in-out 0.5s forwards;
-	z-index: 999;
-
-	border: none;
-	outline: none;
-	mix-blend-mode: color-dodge;
-	opacity: 10;
-	image-rendering: auto;
-	
-	} @keyframes twinkleFast {
-		0% { opacity: 0.2; }
-		50% { opacity: 1; }
-		100% { opacity: 0.2; }
-	} @keyframes twinkleSlow {
-  0% { opacity: 0.2; }
-  50% { opacity: 1; }
-  100% { opacity: 0.2; }
-	}#star {
-	position: absolute;
-	top: 160px;
-	right: 80px;
-	width: 60px;
-	animation: twinkleFast 2.5s ease-in-out infinite;
-	z-index: 998;
-	mix-blend-mode: hard-light;
-	pointer-events: none;
-} #bigstar {
-	position: absolute;
-	top: 145px;
-	right: 115px;
-	mix-blend-mode: hard-light;
-	width: 120px;
-	animation: twinkleSlow 4s ease-in-out infinite;
-	z-index: 997;
-	pointer-events: none;
-} * {
-		margin: 0; 
-		padding: 0;
+		font-family: Tourner;
+		src: url("Tourner.ttf");
+	} @font-face {
+		font-family: Bebasneue;
+		src: url("Bebasneue.ttf");
+	} @keyframes launchRocket {
+        0% {opacity: 1;
+            left: 6px;
+    	    top: 928px;
+        } 50% {
+            left: 6px;
+ 	    } 100% {
+            opacity: 1;
+            left: 600px;
+            top: -350px;
+            transform: rotateZ(30deg);
+  	    }
+	} @keyframes twinkle {
+        0% {opacity: 0.2;}
+        50% {opacity: 1;}
+        100% {opacity: 0.2;}
 	} body {
 		background: whitesmoke;
 	} #page {
@@ -83,115 +41,127 @@
 		background-size: cover;
 		background-position: center;
 		box-shadow: 2px 3px 6px darkgray;
-		margin: 0 auto;
-} h1 {
-	 	font: 43pt/1.4em tourner;
+		margin: 24px auto 48px;
+    } header {
+        width: 100%;
+        height: 250px;
+        // background: lavender;
+    } h1 {
+        font: 43pt/1.4em Tourner;
         text-align: center;
 	  	color: white;
 		padding-top: 50px;
 	    display: block;
 		text-shadow: 1px 1px 15px blue;
-		margin-bottom: px;
-		margin-top: 25px;
-		text-: url("image3.jpg")
-  } h2 {
-     	font: 14pt/1.4em raleway;
+    } h2 {
+     	font: 14pt/1.4em Raleway;
         text-align: center;
 	  	color: white;
-	    display: block;
 	  	margin-top: 13px;
+    } #bigstar {
+        width: 120px;
+        position: relative;
+        left: 700px;
+        top: -50px;
+	    animation: twinkle 4s ease-in-out infinite;
+    } #littlestar {
+        width: 50px;
+        position: relative;
+        left: 700px;
+        top: -50px;
+    	animation: twinkle 2s ease-in-out infinite;
+    } #rocket {
+        position: relative;
+        top: 928px;
+        left: 6px;
+        width: 70px;
+        animation: launchRocket 6s ease-in forwards paused;
+        z-index: 999;
+        // mix-blend-mode: color-burn;
+    } #neptune1 {
+        width: 835px;
+        height: 400px;
+        margin: 0 auto;
+        // background: lavender;
+    } .neptune1 {
+        width: 490px;
+		float: left;
+		margin-right: 25px;
+		box-shadow: 2px 3px 80px midnightblue;
+    } #neptune2 {
+        width: 835px;
+        height: 514px;
+        margin: 0 auto;
+        // background: lightgreen;
+    } .neptune2 {
+  		width: 500px;           
+  		float: right;
+        margin: 0 0 25px 25px;
+        box-shadow: 2px 3px 80px midnightblue;
     } p {
-		font: 14pt/1.4em raleway;
-		width: 768px;
-		margin-right: auto;
+		font: 14pt/1.4em Raleway;
 		margin: 25px auto;
 		color: white;
 		text-shadow: 1px 1px 20px black;
-
-	} p1 {
-		font: 35pt/1.4em bebasneue;
-		width: 200px;
-		padding-bottom: 30px;
+	} h3 {
+		font: 35pt/1.0em Bebasneue;
 		color: white;
 		text-shadow: 1px 1px 10px dodgerblue;
-		
-	} p3 { 
-		font: 24pt/1.4em tourner;
-		color: white;
-		text-align: center;
-		display: block;
-		text-shadow: 1px 1px 10px dodgerblue;
-	} img {
-		width: 490px;
-		float: left;
-		margin-right: 25px;
-		display: block;
-		box-shadow: 2px 3px 80px midnightblue; 
-	} .neptune-right {
-  		width: 500px;           
-  		overflow: hidden;
-  		float: right;
-  		margin-right: 80px;
-		margin-left: 25px;
-  		margin-bottom: 25px;
-  		box-shadow: 2px 3px 80px midnightblue;
-	} .neptune-right img {
- 		 width: 100%;
-  		height: 100%;
-  		object-fit: cover;
-  		object-position: center;
-  		display: block;
-	}
+    } #quote {
+        font: 23.7pt/1.5em Bebasneue;
+        color: white;
+        text-shadow: 1px 1px 15px navy;
+        margin: 2px;
+        padding: 36px 0 0 0;
+        text-shadow: 1px 1px 20px dodgerblue;
+    } #quote #span1 {
+        float: left;
+        font-size: 36pt;
+        line-height: 0.8em;
+        padding-right: 10px;
+        color: dodgerblue;
+        font-family: Tourner;
+    } #quote #span2 {
+        font: 13pt/1.0em Raleway;
+        display: block;
+        margin-top: 15px;
+        text-align: center;
+    } button {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background: radial-gradient(lightblue,teal);
+        font-weight: bold;
+        margin: 24px 0 0 0;
+        border: none;
+    } button:hover {
+        background: radial-gradient(teal,lightblue);
 
-
+    }
 </style>
 </head>
 
 <body>
-<div id="page">
-	
-	<img id="star" src="star.png" alt="Twinkling Star">
-	<img id="bigstar" src="star.png" alt="Netherlands Star">
-	
-<h1>The Distant Blue Giant</h1>
-<h2>A Mysterious World of Ice, Wind, and Wonder</h2>
-<p>&nbsp;</p>
-<p> 
-  <p1>Neptune</p1> <img src="neptune.jpg"/>
-  <p1>&nbsp;</p1>
-<br>
-<strong>Rediscover Wonder:</strong> Neptune, the farthest planet from the Sun, is a swirling sphere of deep blue mystery. Its icy winds and distant orbit remind us how vast the outer solar system truly is.
-</p>
-
-<p>
-<strong>Unplug and Unwind:</strong> No noise, no distractions—just the quiet majesty of a planet 2.8 billion miles away.
-</p>
-<div class="neptune-right">
-  <img src="neptune2.jpg" alt="Neptune">
-</div>
-
-<p>
-<strong>Learn and Explore:</strong> From its supersonic storms to its moon Triton’s retrograde orbit, Neptune offers endless opportunities for discovery and awe. It’s a gateway to planetary science and cosmic curiosity.
-</p>
-<div style="width: 820px; margin: 20px auto;">
-  <p style="font-family: bebasneue; font-size: 23.7pt; line-height: 1.5em; color: white; text-shadow: 1px 1px 15px navy; margin: 2px; padding-left: 25px; text-shadow: 1px 1px 20px dodgerblue;">
-    <span style="float: left; font-size: 36pt; line-height: 0.8em; padding-right: 10px; color: dodgerblue; font-family: tourner;">“</span>
-    Somewhere, something incredible is waiting to be known.
-    <br>
-    <span style="font-size: 13pt; font-family: raleway; display: block; margin-top: 15px; text-align: right;">— Carl Sagan</span>
-  </p>
-</div>
-
-
-</div>
-	
-<img id="rocket" src="rocket.png" alt="Rocket Launching">
-	
+    <div id="page">
+        <header>
+        <h1>The Distant Blue Giant</h1>
+        <h2>A Mysterious World of Ice, Wind, and Wonder</h2>
+        <img id="bigstar" src="star.png" />
+        <img id="littlestar" src="star.png" />
+        <img id="rocket" src="rocket.png" alt="Rocket Launching">
+        </header>
+    <div id="neptune1">
+        <img class="neptune1" src="neptune.jpg"/>
+        <h3>Neptune</h3>
+        <p><strong>Rediscover Wonder:</strong> Neptune, the farthest planet from the Sun, is a swirling sphere of deep blue mystery. Its icy winds and distant orbit remind us how vast the outer solar system truly is.</p>
+        <p><strong>Unplug and Unwind:</strong> No noise, no distractions—just the quiet majesty of a planet 2.8 billion miles away.</p>        
+    </div>
+    <div id="neptune2">
+        <img class="neptune2" src="neptune2.jpg" alt="Neptune">
+        <p><strong>Learn and Explore:</strong> From its supersonic storms to its moon Triton’s retrograde orbit, Neptune offers endless opportunities for discovery and awe. It’s a gateway to planetary science and cosmic curiosity.</p>
+        <p id="quote"><span id="span1">“</span>Somewhere, something incredible is waiting to be known.<span id="span2">— Carl Sagan</span></p>
+        <button onClick="document.getElementById('rocket').style.animationPlayState='running';">Launch Rocket</button>
+    </div>
+    </div>
 </body>
-
 </html>
-
-
-
-
-
